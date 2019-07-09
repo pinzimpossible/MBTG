@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TankPlayerController.h"
+#include "Tank.h"
 #include "Battle_Tank.h"
 
 void ATankPlayerController::Tick(float DeltaTime) {
@@ -30,6 +31,7 @@ ATank* ATankPlayerController::GetControlledTank() const {
 void ATankPlayerController::AimTowardsCrosshair()
 {
 	if (!GetControlledTank()) { return; }
+
 
 	FVector HitLocation;
 
