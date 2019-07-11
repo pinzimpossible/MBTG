@@ -71,12 +71,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		//UE_LOG(LogTemp, Warning, TEXT("Aiming at %s"), *AimDirection.ToString());
 		MoveBarrelTowards(AimDirection);
 		auto Time = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("%f: aim bot : on"), Time);
-	}
-	else 
-	{
-		auto Time = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("%f:  No time for aim"), Time);
+		//UE_LOG(LogTemp, Warning, TEXT("%f: aim bot : on"), Time);
 	}
 }
 
