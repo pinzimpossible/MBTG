@@ -37,13 +37,11 @@ public:
 
 	UTankTurret* Turret = nullptr;
 
-	void SetBarrelReferenece(UTankBarrel* BarrelToSet);
-
-	void SetTurretReferenece(UTankTurret* TurretToSet);
-
 	void MoveBarrelTowards(FVector AimDirection);
 
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 	EFiringState EFiringState = EFiringState::Aiming;
 
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	void Initialise(UTankTurret* TurretToSet, UTankBarrel* BarrelToSet);
 };
