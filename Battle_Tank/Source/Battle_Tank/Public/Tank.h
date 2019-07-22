@@ -52,4 +52,6 @@ public:
 	double LastFireTime = 0;
 
 	UTankBarrel* Barrel = nullptr;
+
+	virtual void BeginPlay() override;
 };
