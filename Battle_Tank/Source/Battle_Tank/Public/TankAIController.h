@@ -10,7 +10,6 @@
  * 
  */
 
-class ATank;
 UCLASS()
 class BATTLE_TANK_API ATankAIController : public AAIController
 {
