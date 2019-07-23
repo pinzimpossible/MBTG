@@ -7,6 +7,7 @@
 #include "TankPlayerController.generated.h"
 
 class ATank;
+class UTankAimingComponent;
 /**
  * 
  */
@@ -39,4 +40,7 @@ public:
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
 
 	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
+	void FoundAimingComponent(UTankAimingComponent* AimCompRef);
 };
