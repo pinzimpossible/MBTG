@@ -42,7 +42,7 @@ public:
 	void MoveBarrelTowards(FVector AimDirection);
 
 	UPROPERTY(BlueprintReadOnly, Category = "State")
-	EFiringState EFiringState = EFiringState::Aiming;
+	EFiringState FiringState = EFiringState::Aiming;
 
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void Initialise(UTankTurret* TurretToSet, UTankBarrel* BarrelToSet);
@@ -60,4 +60,12 @@ public:
 	float ReloadTimeInSeconds = 3;
 
 	double LastFireTime = 0;
+
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	virtual void BeginPlay() override;
+
+	bool IsBarrelMoving();
+
+	FVector AimDirection;
 };
