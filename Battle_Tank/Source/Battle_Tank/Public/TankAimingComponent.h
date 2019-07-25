@@ -42,7 +42,7 @@ public:
 	void MoveBarrelTowards(FVector AimDirection);
 
 	UPROPERTY(BlueprintReadOnly, Category = "State")
-	EFiringState FiringState = EFiringState::Aiming;
+	EFiringState FiringState = EFiringState::Reloading;
 
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void Initialise(UTankTurret* TurretToSet, UTankBarrel* BarrelToSet);
