@@ -22,7 +22,11 @@ public:
 
 	UTankTrack();
 
-	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	void ApplySidewaysForce();
+
+	void DriveTrack();
+
+	float CurrentThrottle = 0;
 
 	virtual void BeginPlay() override;
 

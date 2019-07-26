@@ -41,6 +41,8 @@ public:
 
 	void MoveBarrelTowards(FVector AimDirection);
 
+	EFiringState GetFiringState() const;
+
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 	EFiringState FiringState = EFiringState::Reloading;
 
