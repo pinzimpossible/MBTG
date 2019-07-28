@@ -73,8 +73,9 @@ public:
 	FVector AimDirection;
 
 	UFUNCTION(BlueprintCallable, Category = "Firing")
-	int GetRoundsLeft() const;
+	int32 GetRoundsLeft() const;
 
 
-	int RoundsLeft = 50;
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
+	int32 RoundsLeft = 50;
 };
