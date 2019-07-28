@@ -60,7 +60,7 @@ public:
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-	float ReloadTimeInSeconds = 50;
+	float ReloadTimeInSeconds = 3;
 
 	double LastFireTime = 0;
 
@@ -76,5 +76,5 @@ public:
 	int GetRoundsLeft() const;
 
 
-	int RoundsLeft = 3;
+	int RoundsLeft = 50;
 };

@@ -110,6 +110,7 @@ void UTankAimingComponent::Fire()
 		// Spawn a projectile at the socket location on the barrel
 		if (!ensure(Barrel)) { return; }
 		if (!ensure(ProjectileBlueprint)) { return; }
+		UE_LOG(LogTemp, Warning, TEXT("hello there"));
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
 			ProjectileBlueprint,
 			Barrel->GetSocketLocation(FName("Projectile")),
@@ -119,8 +120,7 @@ void UTankAimingComponent::Fire()
 		Projectile->LaunchProjectile(LaunchSpeed);
 		LastFireTime = FPlatformTime::Seconds();
 		RoundsLeft--;
-		auto TankName = GetOwner()->GetName();
-		UE_LOG(LogTemp, Warning, TEXT("%s : you died"), *TankName);
+		
 	}
 }
 
